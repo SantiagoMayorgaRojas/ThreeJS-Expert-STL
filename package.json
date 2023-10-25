@@ -1,0 +1,33 @@
+{
+  "name": "@doodle3d/threejs-export-stl",
+  "version": "0.0.5",
+  "description": "ThreeJS STL Exporter",
+  "main": "lib/index.js",
+  "module": "module/index.js",
+  "esnext": "src/index.js",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "npm run build:main && npm run build:module ",
+    "build:main": "BABEL_ENV=main babel src -s -d lib",
+    "build:module": "BABEL_ENV=module babel src -s -d module"
+  },
+  "directories": {
+    "lib": "src"
+  },
+  "keywords": [
+    "three",
+    "threejs",
+    "stl",
+    "export"
+  ],
+  "author": "casper@doodle3d",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.6.1",
+    "three": "^0.88.0"
+  }
+}
